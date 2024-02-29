@@ -26,7 +26,10 @@ header {
             a {
                 text-decoration: none;
                 color: rgb(255, 255, 255);
-                padding: 10px;
+                padding: 5px;
+                @media only screen and (max-width: 500px) {
+                    font-size: 0.8rem;
+
             }
         }
         li:hover {
@@ -34,6 +37,7 @@ header {
             transition: 0.5s;
         }
     }
+}
 }
 
 main {
@@ -125,4 +129,57 @@ main {
 .box:hover{
     transform: scale(1.3);
     z-index: 2;
+}
+
+
+.main{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    .head{
+        margin-top: 100px;
+    }
+}
+
+
+.card-ctn{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 2rem;
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: repeat(1 , 1fr);
+        padding-bottom: 100px;
+    }
+    margin-top: 5%;
+    h1{
+        font-size: 1rem;
+    }
+    .card{
+        width: 300px;
+        height: 400px;
+        background-color: rgb(51, 50, 50);
+        border-radius: 20px;
+        .img{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+        .text{
+            margin-top: 10px;
+            display: grid;
+            text-align: start;
+            h1{
+                color: white;
+            }
+            justify-content: center;
+        }
+    }
 }
